@@ -104,278 +104,219 @@
 
     <script>
         // --- QUESTIONS: you can replace/extend this array ---
+        
         const questions = [
-            {
-                question: "Metoda per te marre nje celes me vlere ne trie eshte:",
-                options: [
-                    "Node get (Node x, String key, Value val, int d);",
-                    "Node get(String key, int value);",
-                    "Node get (int id, String key, Value val);",
-                    "Node get (Node x, String key, int d);",
-                ],
-                correct: [3],
-            },
-            {
-                question: "Per te ndertuar nje aplikacion I cili posedon funksionin autocomplete preferohet te perdoret:",
-                options: [
-                    "Brute Force",
-                    "R-Way Tries",
-                    "Rabin - Karp",
-                    "Non-Deterministic Finite Automation",
-                ],
-                correct: [1],
-            },
-            {
-                question: "Per te gjetur Shortest-Path me ane te Bellman Ford algoritmit duhet te mos kete:",
-                options: ["Cikel negative", "Peshe negative", "Relaksim te segmenteve", "Vetem nje kalim (pass) neper kulme"],
-                correct: [0],
-            },
-            {
-                question: "Algoritmet te cilat aplikohen per te bere Substring search jane:",
-                options: ["Boyer Moore", "Brute Force", "Key Logger", "MD5 Hash"],
-                correct: [0, 1],
-            },
-            {
-                question: "Kompleksiteti kohor i LSD varet nga:",
-                options: ["Radix", "Gjatesia e stringut", "Prefix i perbashket", "Pattern"],
-                correct: [0, 1],
-            },
-            {
-                question: "Cilat nga opsionet e meposhtme paraqesin anomali te nje undirected graph:",
-                options: ["DFS", "Self-loop", "Parallel-edges", "Connected components"],
-                correct: [1, 2],
-            },
-            {
-                question: "Disa prej aplikimeve te Reachability (arritshmerise) tek digrafet jane:",
-                options: ["Program control-flow", "Mark-Sweep Garbage Collector", "Directed cycle detection", "Maximum Flow"],
-                correct: [0, 1, 2],
-            },
-            {
-                question: "Metodat kryesore qe perdoren per Binary standard output jane:",
-                options: ["void write(boolean b)", "void write(char c);", "void write (char c, int r);", "void write(Node x, String key, Value val, int d);"],
-                correct: [0, 1],
-            },
-            {
-                question: "Grafi mund te paraqitet permes:",
-                options: ["Matrices", "Adjacency Lists", "Heap", "List of edges"],
-                correct: [0, 1, 3],
-            },
-            {
-                question: "Operacionet te strings jane:",
-                options: ["Index", "Concatenation", "Wildcard", "Length"],
-                correct: [0, 1, 2, 3],
-            },
-            {
-                question: "Algoritme per te gjetur MST jane:",
-                options: ["Greedy", "Topological Order", "Kosaraju Sharir", "Prim Algorithm"],
-                correct: [0, 3],
-            },
-            {
-                question: "Data compression behet per shkak te:",
-                options: ["Kursyer kohen e transferimit", "Decoding", "Encoding", "Perseritje te dhenave (reduction)"],
-                correct: [0, 3],
-            },
-            {
-                question: "Operacionet qe perdoren per regex jane:",
-                options: ["More than once", "Exactly k", "Substring class", "Capitalised class", "At least once"],
-                correct: [0, 1, 4],
-            },
-            {
-                question: "Per te ndertuar nje aplikacion i cili ben autorizimin e personit me fingerprint preferohet:",
-                options: ["Deterministic Finite Automation", "Boyer Moore", "Rabin - Karp", "Non-Deterministic Finite Automation"],
-                correct: [0],
-            },
-            {
-                question: "Teknikat per kerkim per pattern te shumefishte jane:",
-                options: ["Regular expressions", "Lazy algorithm", "Rabin - Karp", "Boyer Moore"],
-                correct: [0, 2, 3],
-            },
-            {
-                question: "Metoda qe kthen nje rruge te shkurter nga kulmi i burimit eshte:",
-                options: ["distTo (int v, int w)", "iterable <Directed Edge> pathTo (int v)", "distTo (int v)", "pathTo (int v)"],
-                correct: [3],
-            },
-            {
-                question: "Cilat jane ngjashmerite ne mes algoritmeve LZW dhe Huffman?",
-                options: ["Implementohen me ane te Tries", "Dekodimi fillon qysh ne start te pranimit te te dhenave", "Perdoren per real-time streaming data", "Jane algoritme adaptive"],
-                correct: [3],
-            },
-            {
-                question: "Metoda qe kthen shumen e peshave ne nje MST eshte:",
-                options: ["Check (edge weighted Graph)", "Weight ()", "Edges()", "Weight (digraph G)"],
-                correct: [1],
-            },
-            {
-                question: "SPT i realizuar me Bellman-Ford paraqitet me ane:",
-                options: ["Add Edge() dhe weight()", "distTo[] dhe edgeTo[]", "pathTo[] dhe distTo[]", "distTo[int v] dhe edgeTo[int w]"],
-                correct: [1],
-            },
-            {
-                question: "Cila prej opsioneve nuk jane arsye per te bere kompresim te te dhenave?",
-                options: ["Dekodimi i te dhenave", "Koha e transmetimit te te dhenave", "Kerkimi i te dhenave", "Perseritja e te dhenave"],
-                correct: [0, 2],
-            },
-            {
-                question: "Rruga eshte sekuence kulmesh te lidhura me ane te segmenteve.",
-                options: ["PO", "JO"],
-                correct: [0],
-            },
-            {
-                question: "Nje spanning tree duhet te jete ciklik.",
-                options: ["PO", "JO"],
-                correct: [1],
-            },
-            {
-                question: "Las Vegas version tek Rabin Karp algoritmi perfundon kur ka false collision.",
-                options: ["PO", "JO"],
-                correct: [0],
-            },
-            {
-                question: "Cikli i Eulerit pershkron secilin segment saktesisht nje here.",
-                options: ["PO", "JO"],
-                correct: [0],
-            },
-            {
-                question: "E-Transicionet tek NFA ruhen ne nje digraph.",
-                options: ["PO", "JO"],
-                correct: [0],
-            },
-            {
-                question: "Algoritmi Dijkstra ne rastin me te keq ka kompleksitet kohor E log V.",
-                options: ["PO", "JO"],
-                correct: [0],
-            },
-            {
-                question: "Algoritmi i Ford-Fulkerson lejon perdorimin e kapaciteteve negative.",
-                options: ["PO", "JO"],
-                correct: [1],
-            },
-            {
-                question: "Vlera e min cut eshte e njejte me vleren e max flow ne nje sistem.",
-                options: ["PO", "JO"],
-                correct: [0],
-            },
-            {
-                question: "Topological order nuk mund te gjendet ne rast se ka cikel ne graf.",
-                options: ["PO", "JO"],
-                correct: [0],
-            },
-            {
-                question: "Brute Force jo gjithmone gjen rezultatet e duhura.",
-                options: ["PO", "JO"],
-                correct: [0],
-            },
-            {
-                question: "Longest path gjen zbatim ne gjetjen e destinacionit ne navigacion.",
-                options: ["PO", "JO"],
-                correct: [0],
-            },
-            {
-                question: "Key-Index-Counting merr kohe lineare proporcionale me Radix.",
-                options: ["PO", "JO"],
-                correct: [0],
-            },
-            {
-                question: "LSD algoritmi shpenzon me shume hapesire gjate ekzekutimit se MSD.",
-                options: ["PO", "JO"],
-                correct: [1],
-            },
-            {
-                question: "NFA te Regular Expressions implementon Queues gjate implementimit te makinerise.",
-                options: ["PO", "JO"],
-                correct: [1],
-            },
-            {
-                question: "Kompleksiteti kohor per Algoritmin Dijkstra (SP) eshte linear.",
-                options: ["PO", "JO"],
-                correct: [1],
-            },
-            {
-                question: "Kur kemi te bejme me rehashing te çelesave:",
-                options: ["Mund te ndryshoje vlera e hash(x) funksionimit", "Mund te ndryshoje vetem çelesi", "Hashcode nuk ndryshon kurre", "Vetem per klasat primitive ndodh"],
-                correct: [0],
-            },
-            {
-                question: "Resizing tek hash-tabela behet kur kemi te bejme me:",
-                options: ["Kur shtojme nje vlere me gjatesi te madhe", "Kur ka shume kolizione", "Zenie me shume se ½ te entries", "Kur lista e çelesave tejkalon numrin e kulmeve"],
-                correct: [2],
-            },
-            {
-                question: "Strategjite per ballafaqim me kolizionet te cilat perdorin open addressing jane:",
-                options: ["Quadratic hashing", "Double hashing", "Linear hashing", "Separate Chaining"],
-                correct: [1, 2],
-            },
-            {
-                question: "Ne çdo block BST definohet sakte qe:",
-                options: ["Mund te kete lidhes te shumte me rrenjen", "Subtree nuk ka dy lidhes te huaj - i lidhur ne seri", "Mund te jete pa nyje femije", "Ka lidhje ciklike per pershpejtim te kerkimit"],
-                correct: [1],
-            },
-            {
-                question: "Per çdo x dhe y, ç'jane requirement per ta plotesuar rroten simetrike ne relacione Java:",
-                options: ["x.equals(y) = true dhe y.equals(x) = false", "x.equals(x) = false", "x.equals(x) = true dhe x.equals(y) nese y.equals(x)", "x.hashCode() = y.hashCode()"],
-                correct: [2],
-            },
-            {
-                question: "Algoritmet me kompleksitet N² (worst case) jane:",
-                options: ["Insertion Sort", "Shell Sort", "Quick Sort", "Merge Sort"],
-                correct: [0, 1],
-            },
-            {
-                question: "Stresi qe kemi kur kemi konstant per insert dhe search:",
-                options: ["Mundesine e krijimit te tompujeve lineare", "Shpejtesine e hashing te pabarabarte", "Rritjen e madhesise se memorie", "Mundesine e kalimit nga 2 modes ne 3 modes dhe anasjelltas"],
-                correct: [0, 3],
-            },
-            {
-                question: "Linked listat:",
-                options: ["Implementojne lloj te te dhenave abstrakte", "Jane statike dhe fikse", "Jane struktura te te dhenave dinamike", "Nuk mbeshtesin fshirjen e nyjeve"],
-                correct: [0, 2],
-            },
-            {
-                question: "Atributet ne baze te te cilave analizohen efikasiteti i algoritmeve:",
-                options: ["Big O(n)", "Hapat kohore", "Hapesira memoruese", "Numri i pointereve"],
-                correct: [0, 1, 2],
-            },
-            {
-                question: "Tipa immutable te te dhenave jane:",
-                options: ["String", "ArrayList", "Object", "Color"],
-                correct: [0, 3],
-            },
-            {
-                question: "Strategjite per ballafaqimin me kolizionet tek hash tables:",
-                options: ["Double Chaining", "Hash Splitting", "Linear Probing", "Separate Hashing"],
-                correct: [0, 2, 3],
-            },
-            {
-                question: "Metodat qe gjenden ne API Symbol Tables Java:",
-                options: ["put(key)", "size()", "contains(key)", "merge()"],
-                correct: [0, 1, 2],
-            },
-            {
-                question: "Ne nje BST teknika per te fshire qe njihet si lazy approach:",
-                options: ["Memory overload", "Kom. kohor kalon nga logaritmik ne linear", "Mund te fshije vetem rrenjen", "Nuk eshte e lejuar per balanced trees"],
-                correct: [1],
-            },
-            {
-                question: "Metodat per futjen e elementeve tek Stack dhe Queue jane:",
-                options: ["pop()", "enqueue()", "delete()", "push()"],
-                correct: [1, 3],
-            },
-            {
-                question: "Oper. kryesore qe perdoren tek Priority Queues jane:",
-                options: ["delMax()", "insert()", "enqueue()", "size()"],
-                correct: [0, 1],
-            },
-            {
-                question: "Disa nga oper. ne BST jane:",
-                options: ["floor", "rank", "get", "put"],
-                correct: [0, 1, 2, 3],
-            },
-            {
-                question: "Tipa abstrakte te te dhenave:",
-                options: ["Bags", "Queues and Stacks", "ArrayList", "Hash Table"],
-                correct: [0, 1, 3],
-            }
-        ];
+  // ==================== MULTIPLE CHOICE ====================
+  {
+    question: "Metoda për të marrë një çelës me vlerë në Trie është:",
+    options: [
+      "Node get(Node x, String key, Value val, int d);",
+      "Node get(String key, int value);",
+      "Node get(int id, String key, Value val);",
+      "Node get(Node x, String key, int d);"
+    ],
+    correct: [3]
+  },
+  {
+    question: "Për autocomplete preferohet të përdoret:",
+    options: ["Brute Force", "R-Way Tries", "Rabin-Karp", "NFA"],
+    correct: [1]
+  },
+  {
+    question: "Për Bellman-Ford duhet të mos ketë:",
+    options: ["Cikël negativ", "Pesha negative", "Relaksim", "Një kalim"],
+    correct: [0]
+  },
+  {
+    question: "Algoritmet për Substring Search janë:",
+    options: ["Boyer-Moore", "Brute Force", "Key Logger", "Rabin-Karp"],
+    correct: [0, 1]
+  },
+  {
+    question: "Kompleksiteti kohor i LSD varet nga:",
+    options: ["Radix", "Gjatësia e stringut", "Prefix i përbashkët", "Pattern"],
+    correct: [0, 1]
+  },
+  {
+    question: "Anomali në undirected graph janë:",
+    options: ["DFS", "Self-loop", "Parallel-edges", "Connected Components"],
+    correct: [1, 2]
+  },
+  {
+    question: "Metodat kryesore për Binary Standard Output janë:",
+    options: [
+      "void write(boolean b)",
+      "void write(char c)",
+      "void write(char c, int r)",
+      "void write(Node x, String key, Value val, int d)"
+    ],
+    correct: [0, 1]
+  },
+  {
+    question: "Grafi mund të paraqitet me:",
+    options: ["Matrices", "Adjacency Lists", "Heap", "List of edges"],
+    correct: [0, 1, 3]
+  },
+  {
+    question: "Operacionet kryesore te string janë:",
+    options: ["Index", "Concatenation", "Wildcard", "Length"],
+    correct: [0, 1, 2, 3]
+  },
+  {
+    question: "Algoritme për MST janë:",
+    options: ["Greedy", "Topological Order", "Kosaraju-Sharir", "Prim"],
+    correct: [0, 3]
+  },
+  {
+    question: "Data compression bëhet për shkak të:",
+    options: ["Kursen kohën, "Decoding", "Encoding", "Redundancy"],
+    correct: [0, 3]
+  },
+  {
+    question: "Operacionet në Regex janë:",
+    options: ["*", "{k}", "Substring class", "Capital class", "+"],
+    correct: [0, 1, 4]
+  },
+  {
+    question: "Për fingerprint preferohet:",
+    options: ["Boyer-Moore", "DFA", "NFA", "Rabin-Karp"],
+    correct: [1]
+  },
+  {
+    question: "Teknika për multi-pattern search:",
+    options: ["Regex", "Boyer-Moore", "Rabin-Karp", "LZW"],
+    correct: [0, 1, 2]
+  },
+  {
+    question: "Metoda që kthen rrugën më të shkurtër nga burimi:",
+    options: [
+      "distTo(v)",
+      "pathTo(v)",
+      "distTo(v,w)",
+      "Iterable<DirectedEdge> pathTo(v)"
+    ],
+    correct: [1, 3]
+  },
+  {
+    question: "Ngjashmëri mes Huffman dhe LZW:",
+    options: ["Trie", "Dekodim i menjëhershëm", "Real-time", "Adaptive"],
+    correct: [3]
+  },
+  {
+    question: "Metoda që kthen peshën totale të MST-së:",
+    options: ["weight()", "edges()", "check()", "weight(G)"],
+    correct: [0]
+  },
+  {
+    question: "SPT me Bellman-Ford paraqitet me:",
+    options: ["distTo[] + edgeTo[]", "pathTo[]", "weight[]", "addEdge()"],
+    correct: [0]
+  },
+
+  // ==================== TRUE / FALSE (në format multiple choice) ====================
+  {
+    question: "Rruga është sekuencë kulmesh të lidhura me segmente.",
+    options: ["True", "False"],
+    correct: [0]
+  },
+  {
+    question: "Një spanning tree duhet të jetë ciklik.",
+    options: ["True", "False"],
+    correct: [1]
+  },
+  {
+    question: "Las Vegas Rabin-Karp ndalon kur gjen false collision.",
+    options: ["True", "False"],
+    correct: [0]
+  },
+  {
+    question: "Cikli Eulerian përshkon çdo brinje saktësisht një herë.",
+    options: ["True", "False"],
+    correct: [0]
+  },
+  {
+    question: "ε-transicionet në NFA ruhen në digraph.",
+    options: ["True", "False"],
+    correct: [0]
+  },
+  {
+    question: "Dijkstra worst-case është E log V (me binary heap).",
+    options: ["True", "False"],
+    correct: [0]
+  },
+  {
+    question: "Ford-Fulkerson lejon kapacitete negative.",
+    options: ["True", "False"],
+    correct: [1]
+  },
+  {
+    question: "Min-cut = Max-flow gjithmonë.",
+    options: ["True", "False"],
+    correct: [0]
+  },
+  {
+    question: "Topological sort nuk ekziston nëse ka cikël.",
+    options: ["True", "False"],
+    correct: [0]
+  },
+  {
+    question: "Brute Force substring search mund të mos gjejë të gjitha rezultatet.",
+    options: ["True", "False"],
+    correct: [1]
+  },
+  {
+    question: "Longest Path përdoret në GPS për navigim.",
+    options: ["True", "False"],
+    correct: [1]
+  },
+  {
+    question: "Key-Indexed Counting është linear në R + N.",
+    options: ["True", "False"],
+    correct: [0]
+  },
+  {
+    question: "LSD shpenzon më shumë memori se MSD.",
+    options: ["True", "False"],
+    correct: [1]
+  },
+  {
+    question: "NFA për Regex përdor Queue për ε-transitions.",
+    options: ["True", "False"],
+    correct: [1]
+  },
+  {
+    question: "Kompleksiteti i Dijkstra-s është linear.",
+    options: ["True", "False"],
+    correct: [1]
+  },
+  {
+    question: "Wildcard '.' mund të jetë bosh ose çdo karakter.",
+    options: ["True", "False"],
+    correct: [0]
+  },
+  {
+    question: "Një graf mund të ketë më shumë se një topological sort.",
+    options: ["True", "False"],
+    correct: [0]
+  },
+  {
+    question: "Implementimi i DFS bëhet me Queue.",
+    options: ["True", "False"],
+    correct: [1]
+  },
+  {
+    question: "Në DFS dhe BFS çdo kulm vizitohet vetëm një herë.",
+    options: ["True", "False"],
+    correct: [0]
+  },
+  {
+    question: "Kruskal dhe Prim janë algoritme Greedy.",
+    options: ["True", "False"],
+    correct: [0]
+  }
+];
+
+console.log("Totali: " + questions.length + " pyetje gati për provim!");
 
         // ---------------------------------------------------
 
@@ -551,4 +492,5 @@
 
 
 </html>
+
 
